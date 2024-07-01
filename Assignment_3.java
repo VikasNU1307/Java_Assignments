@@ -95,6 +95,79 @@ class ArmstrongNumber {
     }
 }
 
+// 9. Write a program to find the prime or not.
+class PrimeNumber {
+    void checkPrime(int num) {
+        boolean isPrime = true;
+        for (int i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            System.out.println(num + " is a prime number.");
+        } else {
+            System.out.println(num + " is not a prime number.");
+        }
+    }
+}
+
+// 10. Write a program to palindrome or not.
+class Palindrome {
+    void checkPalindrome(String str) {
+        String reverseStr = new StringBuilder(str).reverse().toString();
+        if (str.equals(reverseStr)) {
+            System.out.println(str + " is a palindrome.");
+        } else {
+            System.out.println(str + " is not a palindrome.");
+        }
+    }
+}
+
+// 11. Program to check whether a number is EVEN or ODD using switch
+class EvenOddSwitch {
+    void checkEvenOdd(int num) {
+        switch (num % 2) {
+            case 0:
+                System.out.println(num + " is even.");
+                break;
+            case 1:
+                System.out.println(num + " is odd.");
+                break;
+        }
+    }
+}
+
+// 12. Print gender (Male/Female) program according to given M/F using switch
+class GenderSwitch {
+    void printGender(char gender) {
+        switch (gender) {
+            case 'M':
+                System.out.println("Gender is Male.");
+                break;
+            case 'F':
+                System.out.println("Gender is Female.");
+                break;
+            default:
+                System.out.println("Invalid input.");
+        }
+    }
+}
+
+// 13. Program for multiple if else statement (Largest number in 10, 20, and 30)
+class LargestNumberIfElse {
+    void findLargest(int a, int b, int c) {
+        if (a >= b && a >= c) {
+            System.out.println("Largest number is: " + a);
+        } else if (b >= a && b >= c) {
+            System.out.println("Largest number is: " + b);
+        } else {
+            System.out.println("Largest number is: " + c);
+        }
+    }
+}
+
 class Assignment_3 {
     public static void main(String[] args) {
         // Question 1 Object Creation
@@ -128,5 +201,25 @@ class Assignment_3 {
         // Question 8 Object Creation
         ArmstrongNumber obj8 = new ArmstrongNumber();
         obj8.checkArmstrong(153);
+
+        // Question 9 Object Creation
+        PrimeNumber obj9 = new PrimeNumber();
+        obj9.checkPrime(17);
+
+        // Question 10 Object Creation
+        Palindrome obj10 = new Palindrome();
+        obj10.checkPalindrome("madam");
+
+        // Question 11 Object Creation
+        EvenOddSwitch obj11 = new EvenOddSwitch();
+        obj11.checkEvenOdd(29);
+
+        // Question 12 Object Creation
+        GenderSwitch obj12 = new GenderSwitch();
+        obj12.printGender('M');
+
+        // Question 13 Object Creation
+        LargestNumberIfElse obj13 = new LargestNumberIfElse();
+        obj13.findLargest(10, 20, 30);
     }
 }
